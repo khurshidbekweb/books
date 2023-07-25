@@ -16,18 +16,18 @@
 <body>
     <header>
         <div class="container w-100 m-auto">
-            <nav class="navbar py-5">
+            <nav class="navbar mb-2 py-5">
                 <a href="#"><img src="./images/asaxiy-logo.svg" alt="logo"></a>
-                <form class="formMain w-50 d-flex justify-content-evenly">
+                <form class="formMain w-50 p-4 d-flex justify-content-evenly">
                     <input type="search" class="search w-50 p-1 px-2 rounded-3" id="search" placeholder="Search">
                     <button class="searchBtn p-1 px-2 rounded-3 bg-primary text-white">Search</button>
                 </form>
                 <div class="buckmark d-flex justify-content-between align-items-center">
-                    <div class="basket text-center">
+                    <div class="basket text-center mt-5">
                         <img src="./images/basket.svg" style="width: 20px;" alt="basket">
-                        <h6 class="title">Basket</h6>
+                        <h6 class="title mt-1">Basket</h6>
                     </div>
-                    <div class="cobinet text-center mx-3">
+                    <div class="cobinet text-center mx-3 mt-5">
                         <img src="./images/avatar.svg" style="width: 20px;" alt="basket">
                         <h6 class="title">Cobinet</h6>
                     </div>
@@ -41,10 +41,11 @@
                 <div class="introInner d-flex justify-content-between">
                     <form class="formFoor">  
                         <select class="px-2 author rounded-3 fw-bold mx-2 p-1">
-                            <option value="aftet1">Author</option>
+                            <option hidden value="aftet1">Author</option>
                         </select>
                         <select class="px-2 language rounded-3 p-1 fw-bold mx-2">
-                            <option value="launguage">Language</option>
+                            <option hidden value="launguage">Language</option>
+                            <option value="all">All</option>
                         </select>
                         <select class="px-2 rounded-3 p-1 fw-bold mx-2">
                             <option value="after">A-Z</option>

@@ -1,8 +1,10 @@
 "use strict";
 let wrapper = $(".wrapper");
-let elForm = $(".formFoor");
-let authorS = $(".author");
+let elForm = $(".formMain");
+let elForm1 = $(".formFoor");
+let authorSel = $(".author");
 let languageSel = $(".language");
+let elImput = $(".search");
 
 function renderUi(data){
     data.forEach((e)=>{
@@ -61,22 +63,39 @@ function selectAuth(){
 }
 selectAuth();
 
-elForm.addEventListener("change", ()=>{
+// elForm1.addEventListener("submit", (e)=>{  
+//     e.preventDefault();
+//     let setValue = authorSel.value;
     
-    let setValue = authorS.value;
-    
-    let filterArr = books.filter((item) =>{
-        return item.author == setValue;
-    })
-    wrapper.innerHTML = "";
-    console.log(filterArr);
-    renderUi(filterArr);
-})
-elForm.addEventListener("change", ()=>{
+//     let filterArr = books.filter((item) =>{
+//         return item.author == setValue;
+//     })
+//     wrapper.innerHTML = "";
+//     console.log(filterArr);
+//     renderUi(filterArr)
+// })
+elForm1.addEventListener("change", (e)=>{
+    e.preventDefault();
     let setValuse = languageSel.value;
     
-    let filterArr = books.filter((e)=>{
-        return e.language == setValuse;
+    if(setValuse == "all"){
+        wrapper.innerHTML = ""
+        renderUi(books);
+    } else{
+        let filterArr = books.filter((e)=>{
+            return e.language == setValuse;
+        })
+        wrapper.innerHTML = "";
+
+        renderUi(filterArr);
+    }
+})
+elImput.addEventListener("keyup", (evt)=>{
+    evt.preventDefault();
+
+    let setValue = evt.target.value;
+    let filterArr = books.filter(evt=>{
+        return evt.author.toLowerCase().includes(setValue.toLowerCase());
     })
     wrapper.innerHTML = "";
     renderUi(filterArr);

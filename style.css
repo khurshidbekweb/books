@@ -38,3 +38,6 @@ body{
     flex-wrap: wrap;
     gap: 15px;
 }
+.buckmark{
+    height: 70px;
+}
