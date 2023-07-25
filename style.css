@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Lora', serif;
+}
+.container{
+    width: 1240px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+.card{
+    width: 300px;
+    padding: 10px;
+    height: 550px;
+}
+.imgMain{
+    width: 270px;
+    height: 350px;
+    z-index: -1;
+}
+.btnLiki{
+    margin-left: -35px;
+    margin-top: 5px;
+    position: absolute;
+    border: none;
+    background-color: rgba(138, 138, 236, 0.432);    
+}
+.title{    
+    width: 100%;
+    height: 70px;
+}
+.wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
